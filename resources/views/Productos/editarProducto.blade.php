@@ -5,8 +5,8 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="{{ asset('js/calculos.js') }}?v=<?php echo(rand()); ?>"defer></script>
-    <link href="{{ asset('css/estilos.css') }}?v=<?php echo(rand()); ?>"defer rel="stylesheet">
+    <script src="{{ asset('js/calculos.js') }}"defer></script>
+    <link href="{{ asset('css/estilos.css') }}"defer rel="stylesheet">
   </head>
   <body>
     <div class="container">

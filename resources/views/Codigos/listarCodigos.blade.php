@@ -4,7 +4,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link href="{{ asset('css/estilos.css') }}?v=<?php echo(rand()); ?>" rel="stylesheet">
+    <link href="{{ asset('css/estilos.css') }}"defer rel="stylesheet">
     <title></title>
   </head>
   <body>

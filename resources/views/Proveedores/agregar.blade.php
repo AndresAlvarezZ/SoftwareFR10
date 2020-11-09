@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <title>Agregando proveedor</title>
-    <link href="{{ asset('css/estilos.css') }}?v=<?php echo(rand()); ?>" rel="stylesheet">
+    <link href="{{ asset('css/estilos.css') }}"defer rel="stylesheet">
   </head>
   <body>
     <div class="container">
