@@ -94,7 +94,7 @@
                                         <td><input  class="codigoDeCompra" id="total" readonly type="number" name="" value="{{$total}}"></td>
                                         <td><input  class="codigoDeCompra" id="cambio" type="number" name="" required onkeypress="calcularVuelto()" value=""></td>
                                         <td><input  class="codigoDeCompra" id="vuelto" readonly type="number" name="" value=""></td>
-                                        <input hidden id="fechaFactura" type="datetime" name="fechaFactura" value="">
+                                        <input  id="fechaFactura" type="datetime" name="fechaFactura" value="">
                                         <input hidden id="cambioFactura" type="number" name="cambioFactura" value="">
                                         <input hidden id="totalFactura" type="number" name="totalFactura" value="">
                                         <input hidden id="vueltoFactura" type="number" name="vueltoFactura" value="">
