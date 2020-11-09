@@ -36,7 +36,7 @@ class HomeController extends Controller
       }
       $subtotal = 0;
       $total = 0;
-      return 'deberia ir hasta aqui bien';
+      return view('login');
         return view('home',compact('compras','subtotal','total'));
     }
 }
