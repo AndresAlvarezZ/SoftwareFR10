@@ -36,7 +36,7 @@ class HomeController extends Controller
       }
       $subtotal = 0;
       $total = 0;
-      return view('ajuste');
+      return view('ajuste',compact('compras','subtotal','total'));
         return view('home',compact('compras','subtotal','total'));
     }
 }
