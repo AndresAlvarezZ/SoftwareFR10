@@ -201,4 +201,7 @@ form
        #ultimo{
          border-bottom: none;
        }
+       #factura{
+         text-align: center;
+       }
 }

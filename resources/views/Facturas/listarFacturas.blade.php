@@ -26,7 +26,6 @@
                 @endphp
                 <tr>
                   <td id="factura"><strong>Factura #{{$indiceFactura}}</strong></td>
-                  <td id="factura"></td>
                 </tr>
                 <tr>
                   <td id="sinRaya"><strong>Numero de factura</strong></td>
