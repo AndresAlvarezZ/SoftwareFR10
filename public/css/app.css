@@ -2161,7 +2161,7 @@ pre code {
 }
 
 .form-control:-ms-input-placeholder {
-  color: #6c757d;
+  color: brown;
   opacity: 1;
 }
 
@@ -2407,18 +2407,18 @@ textarea.form-control.is-valid {
   border-color: #38c172;
 }
 
-.was-validated .custom-control-input:valid:checked ~ .custom-control-label::before,
-.custom-control-input.is-valid:checked ~ .custom-control-label::before {
+.was-validated .custom-control-:valid:checked ~ .custom-control-label::before,
+.custom-control-.is-valid:checked ~ .custom-control-label::before {
   border-color: #5cd08d;
   background-color: #5cd08d;
 }
 
-.was-validated .custom-control-input:valid:focus ~ .custom-control-label::before,
-.custom-control-input.is-valid:focus ~ .custom-control-label::before {
+.was-validated .custom-control-:valid:focus ~ .custom-control-label::before,
+.custom-control-.is-valid:focus ~ .custom-control-label::before {
   box-shadow: 0 0 0 0.2rem rgba(56, 193, 114, 0.25);
 }
 
-.was-validated .custom-control-input:valid:focus:not(:checked) ~ .custom-control-label::before,
+.was-validated .custom-control-:valid:focus:not(:checked) ~ .custom-control-label::before,
 .custom-control-input.is-valid:focus:not(:checked) ~ .custom-control-label::before {
   border-color: #38c172;
 }
@@ -10902,4 +10902,3 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-

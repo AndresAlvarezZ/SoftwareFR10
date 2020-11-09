@@ -17,8 +17,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+    <link href="{{ asset('css/app.css') }}?=<?php echo(rand()); ?>" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}?=<?php echo(rand()); ?>"defer>
 </head>
 <body>
     <div id="app">

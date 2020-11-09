@@ -4,7 +4,17 @@ body{
 #cabecera{
     background: url('/images/fondo2.jpg')
 }
+#cabeza{
+  text-align: center;
 
+}
+#name::placeholder { color: brown;}
+#apellido::placeholder { color: brown;}
+#dni::placeholder { color: brown;}
+#email::placeholder { color: brown;}
+#clave::placeholder { color: brown;}
+#password::placeholder { color: brown;}
+#password-confirm::placeholder { color: brown;}
 #alerta{
   color: red;
 }
