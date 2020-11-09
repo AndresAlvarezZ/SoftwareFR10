@@ -198,4 +198,7 @@ form
            display: block;
            text-align:center;
        }
+       #ultimo{
+         border-bottom: none;
+       }
 }
