@@ -35,8 +35,8 @@ class FacturasController extends Controller
                 $resta->update();
               }
             }
-            $compra->estado = 'cancelado';
             $compra->fecha = request('fechaFactura');
+            $compra->estado = 'cancelado';
             $compra->update();
         }
       }
