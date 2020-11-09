@@ -85,15 +85,15 @@
                                     <br>
                                     <br>
                                     <table>
-                                      <tr>
-                                        <td><strong>TOTAL</strong></td>
-                                        <td><strong>CAMBIO</strong></td>
-                                        <td><strong>VUELTO</strong></td>
+                                      <tr class="trFactura">
+                                        <td class="tdFactura"><strong>TOTAL</strong></td>
+                                        <td class="tdFactura"><strong>CAMBIO</strong></td>
+                                        <td class="tdFactura"><strong>VUELTO</strong></td>
                                       </tr>
-                                      <tr>
-                                        <td><input  class="codigoDeCompra" id="total" readonly type="number" name="" value="{{$total}}"></td>
-                                        <td><input  class="codigoDeCompra" id="cambio" type="number" name="" required onkeypress="calcularVuelto()" value=""></td>
-                                        <td><input  class="codigoDeCompra" id="vuelto" readonly type="number" name="" value=""></td>
+                                      <tr class="trFactura">
+                                        <td class="tdFactura"><input  class="codigoDeCompra" id="total" readonly type="number" name="" value="{{$total}}"></td>
+                                        <td class="tdFactura"><input  class="codigoDeCompra" id="cambio" type="number" name="" required onkeypress="calcularVuelto()" value=""></td>
+                                        <td class="tdFactura"><input  class="codigoDeCompra" id="vuelto" readonly type="number" name="" value=""></td>
                                         <input hidden id="fechaFactura" type="datetime" name="fechaFactura" value="">
                                         <input hidden id="cambioFactura" type="number" name="cambioFactura" value="">
                                         <input hidden id="totalFactura" type="number" name="totalFactura" value="">

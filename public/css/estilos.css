@@ -178,19 +178,19 @@ form
        table {
            width:100%;
        }
-       tr:nth-of-type(2n) {
+       .trFactura:nth-of-type(2n) {
            background-color: inherit;
        }
-       tr td:first-child {
+       .trFactura .tdFactura:first-child {
            background: #f0f0f0;
            font-weight:bold;
            font-size:1.3em;
        }
-       tbody td {
+        .tdFactura {
            display: block;
            text-align:center;
        }
-       tbody td:before {
+        .tdFactura:before {
            content: attr(data-th);
            display: block;
            text-align:center;
