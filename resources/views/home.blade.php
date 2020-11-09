@@ -99,7 +99,7 @@
                                         <input hidden id="totalFactura" type="number" name="totalFactura" value="">
                                         <input hidden id="vueltoFactura" type="number" name="vueltoFactura" value="">
 
-                                        <td><button  type="submit" class="btn btn-success" name="button">Generar factura</button></td>
+                                        <td class="tdFactura"><button  type="submit" class="btn btn-success" name="button">Generar factura</button></td>
                                       </tr>
                                     </table>
                                   </form>

@@ -17,7 +17,7 @@ class FacturasController extends Controller
     {
       $vuelto =(int)request('vueltoFactura');
       if ($vuelto<0) {
-        return redirect('/ajuste')->with('status','Has ingresado un cambio menor al total a pagar!!');
+        return redirect('/home')->with('status','Has ingresado un cambio menor al total a pagar!!');
       }
 
       $idUsuario = auth()->user()->id;
@@ -35,8 +35,8 @@ class FacturasController extends Controller
                 $resta->update();
               }
             }
-            $compra->fecha = request('fechaFactura');
             $compra->estado = 'cancelado';
+            $compra->fecha = request('fechaFactura');
             $compra->update();
         }
       }
