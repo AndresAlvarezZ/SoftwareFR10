@@ -16,6 +16,7 @@
                   <h1>Lista de Proveedores <a id="ajuste" href="/home">Cerrar ventana</a></h1>
                 </div>
                 <div id="ingresarProveedor" class="card-body">
+                  <div class="tablaPricipal">
                   <table class="table">
                               <thead class="thead-dark">
                                   <tr>
@@ -41,6 +42,7 @@
 
                               </tbody>
                           </table>
+                        </div>
             </div>
           </div>
         </div>
