@@ -24,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+      return 'algo paso';
       $idUsuario = auth()->user()->id;
       $comprasTotales = Compra::whereIn('idUsuario',[$idUsuario])->get();
       $compras = [];
