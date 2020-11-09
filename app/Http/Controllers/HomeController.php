@@ -28,7 +28,6 @@ class HomeController extends Controller
       $comprasTotales = Compra::whereIn('idUsuario',[$idUsuario])->get();
       $compras = [];
       $identificador =0;
-      return 'algo hasta aqui bien';
       foreach ($comprasTotales as $compra) {
         if ($compra->estado=='pendiente') {
           $compras[$identificador] = $compra;
@@ -37,6 +36,7 @@ class HomeController extends Controller
       }
       $subtotal = 0;
       $total = 0;
+      return 'deberia ir hasta aqui bien';
         return view('home',compact('compras','subtotal','total'));
     }
 }
