@@ -2,4 +2,3 @@
 <br>
 Compras
 <br>
-{{$compras[1]}}
