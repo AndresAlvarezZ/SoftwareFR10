@@ -2,4 +2,4 @@
 <br>
 Compras
 <br>
-{{$compras}}
+{{$compras[1]}}
