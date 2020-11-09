@@ -18,6 +18,8 @@ let vuelto = document.getElementById('vuelto')
 let totalFactura = document.getElementById("totalFactura")
 let cambioFactura = document.getElementById("cambioFactura")
 let vueltoFactura = document.getElementById('vueltoFactura')
+let fecha = document.getElementById('fecha')
+let fechaFactura = document.getElementById('fechaFactura')
 
 cambio.addEventListener('input', function () {
     var error = true;
@@ -29,6 +31,8 @@ cambio.addEventListener('input', function () {
             totalFactura.value = total.value
             cambioFactura.value = cambio.value
             vueltoFactura.value = vuelto.value
+            fechaFactura.value = fecha.value
+            fecha.value = fecha.value
             error = false;
         }
         if (cambio.value=='') {
