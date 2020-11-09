@@ -1,0 +1,166 @@
+body{
+  background: url('/images/fondo10.jpg')
+}
+#cabecera{
+    background: url('/images/fondo2.jpg')
+}
+
+#alerta{
+  color: red;
+}
+#slow{
+  background-color: lightblue;
+}
+#carrito{
+ background: linear-gradient(to left,brown,black);
+ border-bottom: dashed;
+}
+
+#div1 {animation-timing-function: step-end;
+  width: 50px;
+  height: 45px;
+  background-color: red;
+  font-weight: bold;
+  position: relative;
+  animation: mymove 20s infinite;
+}
+
+@keyframes mymove {
+  from {left: 400px;}
+  to {left: 1000px;}
+}
+#nombreDelClienteFactura::placeholder { color: brown; font-weight: bold; }
+table
+{
+	margin: auto;
+	text-align: center;
+}
+form
+{
+	margin: auto;
+	text-align: center;
+}
+.descartarCambios
+{
+	margin: none;
+	text-align: none;
+}
+.card-header
+{
+	background: linear-gradient(to left,#41f497,#41dff4);
+}
+
+.btnFacturas{
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 5px;
+	margin-top: 10px;
+  color: darkblue;
+}
+#sinRaya{
+	padding-left: 5px;
+	padding-right: 5px;
+	border-top: none;
+	border-color: none;
+	text-align: left;
+}
+#ultimo{
+	padding-left: 5px;
+	padding-right: 5px;
+	border-top: none;
+	border-color: none;
+	text-align: left;
+  border-bottom: dashed;
+  border-color: brown;
+}
+#articulos{
+	padding-left: 5px;
+	padding-right: 5px;
+	border-top: none;
+	border-color: none;
+	text-align: left;
+}
+#factura{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 10px;
+	margin-top: 5px;
+	border-top: none;
+	border-color: brown;
+	text-align: right;
+}
+  .mostarFacturas{
+    padding-top: 0px;
+    overflow-y: scroll;
+    height: 500px;
+    background-image: url('/images/fondo3.jpg');
+    background-size: cover;
+}
+#ingresarProveedor{
+  background-image: url('/images/fondo3.jpg');
+  background-size: cover;
+  font-size: 18px;
+  font-variant: small-caps;
+  font-family: "Homer Simpson UI";
+
+}
+
+.desplegable {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+	text-align: center;
+}
+
+@media screen and (max-width:700px) {
+	.desplegable .liDesplegable {
+	  float: none;
+	}
+}
+.liDesplegable {
+  float: left;
+}
+
+.desplegable1, .dropbtn {
+  display: inline-block;
+  color: orange;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.btn{
+  background: #a69ba8;
+    font-size: 16px;
+    color: black;
+}
+.btn:hover{
+    background:linear-gradient(to left,green,#333);
+  color:white;
+}
+.desplegable1:hover, .lista:hover  {
+  background: linear-gradient(to left,brown,blue);
+ color:white;
+ text-decoration: inherit}
+.codigoDeCompra,#fecha{
+  height: 40px;
+  font-size: 20px;
+  text-align: left;
+}
+.tablaPricipal{
+  overflow-y: scroll;
+  border-bottom: dashed;
+  font-size: 20px;
+  height: 250px;
+}
+#ajuste{
+  font-size: 15px;
+  float: right;
+  padding-right: 10px;
+}
+#oculto{
+  display: none;
+}
