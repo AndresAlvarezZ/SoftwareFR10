@@ -15,7 +15,12 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header"><h1>SOFTWARE DE FACTURACION FR10 <a id="ajuste" href="/ajuste">Ajustar pantalla</a></h1> </div>
+                    <div class="card-header"><h1>SOFTWARE DE FACTURACION FR10 <a id="ajuste" href="/ajuste">Ajustar pantalla</a>
+                      @if (auth()->user()->id ==1)
+                          <a id="ajuste" href="/agregarClave">Agregar clave</a>
+                          <a id="ajuste" href="/listarClaves">Listar claves</a>
+                      @endif
+                      </h1> </div>
 
                     <div class="card-body">
                         @if (session('status'))

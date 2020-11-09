@@ -56,3 +56,7 @@ Route::get('/generarFacturaPantallaAjustada','AjustesController@generarFactura')
 Route::get('/editarProductoPantallaAjustada/{producto}','AjustesController@editarProducto');
 Route::put('/editarProductoPantallaAjustada/{producto}','AjustesController@editarProductoPost');
 Route::delete('/eliminarProductoPantallaAjustada/{producto}','AjustesController@eliminarProducto');
+//rutas para agregar Claves
+Route::get('agregarClave','ClavesController@agregarClave');
+Route::Post('/agregarClavePost','ClavesController@agregarClavePost');
+Route::get('/listarClaves','ClavesController@listarClaves');
