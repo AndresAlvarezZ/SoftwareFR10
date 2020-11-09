@@ -29,12 +29,6 @@ class FacturasController extends Controller
         if ($compra->estado == 'pendiente') {
             $existe = 'si';
             $sumador++;
-            foreach ($comprasRestadas as $resta) {
-              if ($compra->codigoDelProducto == $resta->codigoDelProducto) {
-                $resta->cantidadDelProducto = $resta->cantidadDelProducto-$compra->cantidadDelProducto;
-                $resta->update();
-              }
-            }
             $compra->estado = 'cancelado';
             $compra->fecha = request('fechaFactura');
             $compra->update();

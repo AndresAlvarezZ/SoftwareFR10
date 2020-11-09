@@ -83,6 +83,7 @@ class ProductosController extends Controller
           foreach ($codigos as $codigo) {
             if ($codigo->codigo==$producto->codigoDelProducto) {
               $codigo->codigo = request('codigoDelProducto');
+              $codigo->nombreDelProducto = request('nombreDelProducto');
               $codigo->update();
             }
           }

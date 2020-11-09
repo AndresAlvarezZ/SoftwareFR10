@@ -107,7 +107,8 @@
                                   <p style="color:red;">**si el monto de cambio es menor al total no se generará la factura**</p>
                         </div>
                         <div class="card-footer">
-                          © 2019-<?php echo date("Y"); ?> - Software de facturacion FR10.
+                          © 2019-<?php echo date("Y"); ?> - Software de facturacion FR10. |
+                          <a target="_blank" href="https://api.whatsapp.com/send?phone=50660866447">WhatsApp<img height=25px; src='/images/whatsapp.png' border="0"/></a>
                         </div>
                     </div>
                 </div>

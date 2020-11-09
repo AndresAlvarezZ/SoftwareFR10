@@ -28,6 +28,9 @@ class CompraController extends Controller
           }
         //  return view ('pruebas',compact('compras'));
         if ($compra->codigoDelProducto==$codigo) {
+
+              $compra->cantidadDelProducto = $compra->cantidadDelProducto-request('cantidad');
+              $compra->update();
           $existe = "si";
           Compra::create([
             'idUsuario' => $idUsuario,
@@ -51,6 +54,27 @@ class CompraController extends Controller
     }
     public function editarProductoPost(compra $producto)
     {
+      $idUsuario = auth()->user()->id;
+      $compras = Productos::where('idUsuario','=',$idUsuario)->get();
+      $restadora =0;
+      $esNegativo = 'no';
+      foreach ($compras as $compra) {
+        if ($producto->codigoDelProducto == $compra->codigoDelProducto) {
+          $restadora = $producto->cantidadDelProducto-request('cantidadDelProducto');
+          if ($restadora<0) {
+            $restadora = $restadora*-1;
+            $esNegativo = 'si';
+          }
+          if ($esNegativo=='no') {
+            $compra->cantidadDelProducto = $compra->cantidadDelProducto+$restadora;
+            $compra->update();
+          }
+          if ($esNegativo=='si') {
+            $compra->cantidadDelProducto = $compra->cantidadDelProducto-$restadora;
+            $compra->update();
+          }
+        }
+      }
       $producto->update(request()->all());
       return redirect('/home')->with('exito','Producto editado correctamente');
     }
