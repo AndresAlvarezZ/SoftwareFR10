@@ -60,3 +60,5 @@ Route::delete('/eliminarProductoPantallaAjustada/{producto}','AjustesController@
 Route::get('agregarClave','ClavesController@agregarClave');
 Route::Post('/agregarClavePost','ClavesController@agregarClavePost');
 Route::get('/listarClaves','ClavesController@listarClaves');
+//ruta para imprimir
+Route::get('/imprimir','HomeController@imprimir');

@@ -47,7 +47,7 @@
                           @csrf
                           <input class="codigoDeCompra" placeholder="Codigo" type="text" required name="codigo" value="">
                           <input class="codigoDeCompra" placeholder="Cantidad" type="number" required name="cantidad" value="">
-                          <input id="fecha" type="datetime" readonly name="fecha" value="<?php echo date("Y-m-d H:i");?>">
+                          <input id="fecha" type="datetime" readonly name="fecha" value="<?php echo date("Y-m-d H:i:s");?>">
                           <br>
                           <br>
                           <button  class="btn btn-success" type="submit" name="button">Agregar a la compra</button>

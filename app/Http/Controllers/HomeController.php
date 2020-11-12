@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Compra;
+use PDF;
+use App\Proveedores;
 
 class HomeController extends Controller
 {
@@ -38,5 +40,12 @@ class HomeController extends Controller
       $total = 0;
       return view('central',compact('compras','subtotal','total'));
         return view('home',compact('compras','subtotal','total'));
+    }
+    public function imprimir()
+    {
+      $idUsuario = auth()->user()->id;
+      $lista = Proveedores::whereIn('idUsuario',[$idUsuario])->get();
+      $pdf = PDF::loadView('Proveedores.listarProveedoresPdf',compact('lista'))->setOptions(['defaultFont' => 'sans-serif']);
+      return $pdf->download('pruebapdf.pdf');
     }
 }
