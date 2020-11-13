@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Compra;
 use PDF;
 use App\Proveedores;
+use App\Facturas;
 
 class HomeController extends Controller
 {
@@ -41,11 +42,14 @@ class HomeController extends Controller
       return view('central',compact('compras','subtotal','total'));
         return view('home',compact('compras','subtotal','total'));
     }
-    public function imprimir()
+    public function imprimir(Facturas $factura)
     {
       $idUsuario = auth()->user()->id;
-      $lista = Proveedores::whereIn('idUsuario',[$idUsuario])->get();
-      $pdf = PDF::loadView('Proveedores.listarProveedoresPdf',compact('lista'))->setOptions(['defaultFont' => 'sans-serif']);
-      return $pdf->download('pruebapdf.pdf');
+      $fecha = date('Y-m-d');
+      $indice = 0;
+      $indiceFactura = 0;
+      $compras = Compra::where('idUsuario',$idUsuario)->get();
+      $pdf = PDF::loadView('Facturas.imprimirFacturas',compact('factura','compras','indice','fecha'))->setOptions(['defaultFont' => 'sans-serif']);
+      return $pdf->download('factura.pdf');
     }
 }

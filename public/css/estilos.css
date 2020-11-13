@@ -75,6 +75,9 @@ form
 	border-color: none;
 	text-align: left;
 }
+#espaciador{
+  padding-bottom: 15px;
+}
 #ultimo{
 	padding-left: 5px;
 	padding-right: 5px;

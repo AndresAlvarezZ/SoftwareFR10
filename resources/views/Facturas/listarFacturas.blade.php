@@ -5,7 +5,7 @@
 
 <head>
     <title>Carrito de compras</title>
-    <link href="{{ asset('css/estilos.css') }}"defer rel="stylesheet">
+    <link href="{{ env('http://localhost') }}/css/estilos.css?v=<?php echo(rand()); ?>"defer rel="stylesheet">
 
 <body>
 
@@ -66,8 +66,24 @@
                   <td id="sinRaya">{{$factura->cambio}}</td>
                 </tr>
                 <tr>
-                  <td id="ultimo"><strong>Vuelto</strong></td>
-                  <td id="ultimo">{{$factura->vuelto}}</td>
+                  <td id="sinRaya"><strong>Vuelto</strong></td>
+                  <td id="sinRaya">{{$factura->vuelto}}</td>
+                </tr>
+                <tr>
+                  <td id="espaciador"></td>
+                </tr>
+                <tr>
+                  <td id="sinRaya"></td>
+                  <td id="sinRaya"><form class="" action="/imprimir/{{$factura->id}}" method="get">
+                    <button type="submit" class="btn btn-primary" name="button">hacer pdf</button>
+                  </form> </a></td>
+                </tr>
+                <tr>
+                  <td id="espaciador"></td>
+                </tr>
+                <tr>
+                  <td id="ultimo"></td>
+                  <td id="ultimo"></td>
                   <td id="ultimo"></td>
                 </tr>
                 <?php $indiceFactura++; ?>
