@@ -62,3 +62,8 @@ Route::Post('/agregarClavePost','ClavesController@agregarClavePost');
 Route::get('/listarClaves','ClavesController@listarClaves');
 //ruta para imprimir
 Route::get('/imprimir/{factura}','HomeController@imprimir');
+//RUTAS PARA APERTURA Y CIERRE DE Caja
+Route::get('/abrirCaja', 'CajaController@apertura');
+Route::post('/aperturaPost','CajaController@aperturaPost');
+Route::get('/cerrarCaja','CajaController@cerrarCaja');
+Route::Post('/cerrarCaja/{caja}','CajaController@cerrarCajaPost');

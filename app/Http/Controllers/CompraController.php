@@ -23,12 +23,11 @@ class CompraController extends Controller
         $compras = Productos::where('idUsuario','=',$idUsuario)->get();
         $existe = "no";
         foreach ($compras as $compra) {
+        //  return view ('pruebas',compact('compras'));
+        if ($compra->codigoDelProducto==$codigo) {
           if ($compra->cantidadDelProducto<request('cantidad')) {
             return redirect('/home')->with('status','No tienes inventario suficiente!!');
           }
-        //  return view ('pruebas',compact('compras'));
-        if ($compra->codigoDelProducto==$codigo) {
-
               $compra->cantidadDelProducto = $compra->cantidadDelProducto-request('cantidad');
               $compra->update();
           $existe = "si";
@@ -80,6 +79,17 @@ class CompraController extends Controller
     }
     public function eliminarProducto(Compra $producto)
     {
+      $idUsuario = auth()->user()->id;
+      $compras = Productos::where('idUsuario','=',$idUsuario)->get();
+      $restadora =0;
+      $esNegativo = 'no';
+      foreach ($compras as $compra) {
+        if ($producto->codigoDelProducto == $compra->codigoDelProducto) {
+
+            $compra->cantidadDelProducto = $compra->cantidadDelProducto+$producto->cantidadDelProducto;
+            $compra->update();
+          }
+      }
       $producto->delete();
       return redirect('/home')->with('exito','Producto eliminado');
     }

@@ -22,6 +22,7 @@ class CreateProductosTable extends Migration
             $table->integer('cantidadDelProducto');
             $table->decimal('precioDelProducto');
             $table->string('proveedorDelProducto');
+            $table->integer('alerta');
             $table->timestamps();
 
             //relacion con Usuario

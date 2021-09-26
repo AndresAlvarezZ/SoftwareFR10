@@ -25,7 +25,7 @@
                           {{ session('exito') }}
                       </div>
                   @endif
-                  <div class="tablaPricipal">
+                  <div class="tablaProductos">
                   <table class="table">
                               <thead class="thead-dark">
                                   <tr>

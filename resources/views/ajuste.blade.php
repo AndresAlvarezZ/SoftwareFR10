@@ -19,26 +19,44 @@
                     <a id="ajuste" href="/home">Pantalla normal</a>
                   </div>
                   <div class="card-body">
-                      @if (session('status'))
-                          <div class="alert alert-danger" role="alert">
-                              {{ session('status') }}
-                          </div>
-                      @endif
-                      @if (session('exito'))
-                          <div class="alert alert-success" role="alert">
-                              {{ session('exito') }}
-                          </div>
-                      @endif
-                        <form class="" action="/agregarCompraPantallaAjustada" method="post">
+                    @if (session('alerta')=='si')
+                        <div class="alert alert-danger" role="alert">
+                            {{ session('message') }}
+                        </div>
+                    @endif
+                    @if (session('exito'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('exito') }}
+                            <div class="cierre">
+                              <button class="btn-danger" type="button" onclick="cerrar()" name="">X</button>
+                            </div>
+
+                        </div>
+                    @endif
+                    @if (session('status'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                        <div class="cierre">
+                          <button class="btn-danger" type="button" onclick="cerrar()" name="">X</button>
+                        </div>
+
+                    </div>
+                    @endif
+                        <form class="tablaBaja" action="/agregarCompraPantallaAjustada" method="post">
                           @csrf
-                          <input class="codigoDeCompra" placeholder="Codigo" type="text" required name="codigo" value="">
-                          <input class="codigoDeCompra" placeholder="Cantidad" type="number" required name="cantidad" value="">
-                          <input id="fecha" type="datetime" readonly name="fecha" value="<?php echo date("Y-m-d H:i");?>">
-                          <br>
-                          <br>
-                          <button  class="btn btn-success" type="submit" name="button">Agregar a la compra</button>
+                          <table>
+                            <tr>
+                              <td><input class="codigoDeCompra" placeholder="Codigo" type="text" required name="codigo" value=""></td>
+                              <td><input class="codigoDeCompra" placeholder="Cantidad" type="number" required name="cantidad" value=""></td>
+                              <td><button  class="btn btn-success " type="submit" name="button">Agregar a la compra</button></td>
+                            </tr>
+                          </table>
+
+
+                          <input id="fecha" type="datetime" readonly hidden name="fecha" value="<?php echo date("Y-m-d H:i");?>">
+
+
                         </form>
-                        <br>
                         <div class="tablaPricipal">
                           <table class="table">
                                       <thead class="thead-dark">
@@ -71,7 +89,7 @@
                                   </table>
                         </div>
                         <br>
-                                  <form  class="" action="/generarFacturaPantallaAjustada" method="get">
+                                  <form  class="tablaBaja" action="/generarFacturaPantallaAjustada" method="get">
                                     <input  id="nombreDelClienteFactura" placeholder="Nombre del cliente" type="text"  name="nombreDelClienteFactura" value="">
                                     <br>
                                     <br>

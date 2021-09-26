@@ -13,6 +13,7 @@ class Productos extends Model
       'descripcionDelProducto',
       'cantidadDelProducto',
       'precioDelProducto',
+      'alerta',
       'proveedorDelProducto',
     ];
 }

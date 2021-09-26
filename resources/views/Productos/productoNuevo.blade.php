@@ -95,6 +95,19 @@
                       </div>
                   </div>
                   <div class="form-group row">
+                      <label for="alerta" class="col-md-4 col-form-label text-md-right">{{ __('Alerta') }}</label>
+
+                      <div class="col-md-6">
+                          <input id="alerta" type="number" title="Sirve para avisar agotamiento de inventario" placeholder="Sirve para avisar agotamiento de inventario " class="form-control @error('alerta') is-invalid @enderror" name="alerta" value="{{ old('alerta') }}" required autocomplete="precioDelProducto" autofocus>
+
+                          @error('alerta')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                          @enderror
+                      </div>
+                  </div>
+                  <div class="form-group row">
                       <label for="proveedorDelProducto" class="col-md-4 col-form-label text-md-right">{{ __('Proveedor') }}</label>
 
                       <div class="col-md-6">

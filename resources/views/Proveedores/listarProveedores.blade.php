@@ -42,9 +42,6 @@
 
                               </tbody>
                           </table>
-                        </div>
-                        <a href="/imprimir">imprimir</a>
-            </div>
           </div>
         </div>
       </div>

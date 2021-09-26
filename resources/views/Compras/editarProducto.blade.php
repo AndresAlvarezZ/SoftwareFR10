@@ -62,6 +62,7 @@
               @method('delete')
               <center><button type="submit" class="btn btn-warning">Eliminar producto</button></center>
             </form>
+            <p>**el producto solamente se elimina de la compra**</p>
         </div>
     </div>
 </div>

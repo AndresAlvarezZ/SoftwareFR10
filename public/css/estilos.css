@@ -1,5 +1,7 @@
 body{
-  background: url('/images/fondo10.jpg')
+  background: url('/images/fondo10.jpg');
+  margin: 0;
+  padding: 0;
 }
 #cabecera{
     background: url('/images/fondo2.jpg')
@@ -17,6 +19,9 @@ body{
 #password-confirm::placeholder { color: brown;}
 #alerta{
   color: red;
+}
+.container{
+
 }
 #slow{
   background-color: lightblue;
@@ -113,9 +118,7 @@ form
 #ingresarProveedor{
   background-image: url('/images/fondo3.jpg');
   background-size: cover;
-  font-size: 18px;
-  font-variant: small-caps;
-  font-family: "Homer Simpson UI";
+  font-family: "arial";
 
 }
 
@@ -123,27 +126,26 @@ form
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: #333;
-	text-align: center;
 }
 
-@media screen and (max-width:700px) {
-	.desplegable .liDesplegable {
-	  float: none;
-	}
-}
-.liDesplegable {
+.ulDesplegables{
   float: left;
+}
+.desplegableDerecho{
+  float: right;
 }
 
 .desplegable1, .dropbtn {
   display: inline-block;
   color: orange;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 5px;
   text-decoration: none;
   font-size: 20px;
+}
+.cierre{
+  float: right;
 }
 .btn{
   background: #a69ba8;
@@ -166,8 +168,18 @@ form
 .tablaPricipal{
   overflow-y: scroll;
   border-bottom: dashed;
+  font-size: 16px;
+  height: 230px;
+  padding-top: 12px;
+}
+.tablaBaja{
+  font-size: 16px;
+}
+.tablaProductos{
+  overflow-y: scroll;
+  border-bottom: dashed;
   font-size: 20px;
-  height: 250px;
+  height: 450px;
 }
 #ajuste{
   font-size: 15px;

@@ -93,6 +93,19 @@
                       </div>
                   </div>
                   <div class="form-group row">
+                      <label for="alerta" class="col-md-4 col-form-label text-md-right">{{ __('Alerta') }}</label>
+
+                      <div class="col-md-6">
+                          <input id="alerta" type="number" class="form-control @error('alerta') is-invalid @enderror" name="alerta" value="{{$producto->alerta}}" required autocomplete="alerta" autofocus>
+
+                          @error('alerta')
+                              <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                              </span>
+                          @enderror
+                      </div>
+                  </div>
+                  <div class="form-group row">
                       <label for="proveedorDelProducto" class="col-md-4 col-form-label text-md-right">{{ __('Proveedor') }}</label>
 
                       <div class="col-md-6">
@@ -125,7 +138,7 @@
                   <br>
                   <div  class="form-group row mb-0">
                       <div class="col-md-6 offset-md-4">
-                          <button class="btn" type="submit" class="btn btn-primary">
+                          <button class="btn" type="submit" title="Arriba para cerrar ventana" class="btn btn-primary">
                               {{ __('Cancelar edición') }}
                           </button>
                       </div>

@@ -29,6 +29,7 @@ class ProductosController extends Controller
         'descripcionDelProducto' => 'required',
         'cantidadDelProducto' => 'required',
         'precioDelProducto' => 'required',
+        'alerta' => 'required',
         'proveedorDelProducto' => 'required',
       ]);
       $idUsuario = auth()->user()->id;
@@ -47,6 +48,7 @@ class ProductosController extends Controller
             'descripcionDelProducto' => request('descripcionDelProducto'),
             'cantidadDelProducto' => request('cantidadDelProducto'),
             'precioDelProducto' => request('precioDelProducto'),
+            'alerta' => request('alerta'),
             'proveedorDelProducto' => request('proveedorDelProducto'),
           ]);
           $idProducto = Productos::where('idUsuario',$idUsuario)->get();
